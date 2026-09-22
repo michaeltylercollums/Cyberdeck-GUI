@@ -1,0 +1,67 @@
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#0B0E14"
+
+# Main text color
+theme[main_fg]="#E6E6E6"
+
+# Title color for boxes
+theme[title]="#00F0FF"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#FF003C"
+
+# Background color of selected item in lists
+theme[selected_bg]="#1E232A"
+
+# Foreground color of selected item in lists
+theme[selected_fg]="#FCEE0A"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#565F89"
+
+# Color of text appearing on top of graphs, i.e. uptime, CPU temp
+theme[graph_text]="#00F0FF"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#00F0FF"
+
+# Cpu box outline color
+theme[cpu_box]="#00F0FF"
+
+# Memory/disks box outline color
+theme[mem_box]="#00F0FF"
+
+# Net up/down box outline color
+theme[net_box]="#00F0FF"
+
+# Processes box outline color
+theme[proc_box]="#00F0FF"
+
+# Box divider line and small boxes line color
+theme[div_line]="#1E232A"
+
+# Temperature graph colors (Low -> Mid -> High -> Danger)
+theme[temp_start]="#00F0FF"
+theme[temp_mid]="#FCEE0A"
+theme[temp_max]="#FF003C"
+
+# CPU graph colors
+theme[cpu_start]="#00F0FF"
+theme[cpu_mid]="#FCEE0A"
+theme[cpu_max]="#FF003C"
+
+# Mem colors
+theme[free]="#00F0FF"
+theme[cached]="#FCEE0A"
+theme[available]="#00F0FF"
+theme[used]="#FF003C"
+
+# Download graph colors
+theme[download_start]="#00F0FF"
+theme[download_mid]="#FCEE0A"
+theme[download_max]="#FF003C"
+
+# Upload graph colors
+theme[upload_start]="#FCEE0A"
+theme[upload_mid]="#FF003C"
+theme[upload_max]="#FF003C"

@@ -1,0 +1,181 @@
+/* ===================================================================
+   CYBERPUNK 2077 HUD THEME OVERRIDE FOR GNOME SHELL
+   Colors:
+     - Obsidian Dark: #0B0E14
+     - Cyberpunk Yellow: #FCEE0A
+     - Arasaka / Netrunner Red: #FF003C
+     - Neon Ice Cyan: #00F0FF
+     - Muted Border Slate: #1E232A
+   =================================================================== */
+
+/* --- TOP PANEL HUD --- */
+#panel {
+    background-color: rgba(11, 14, 20, 0.94);
+    font-weight: 700;
+    height: 34px;
+    border-radius: 0px !important;
+    border-bottom: 2px solid #00F0FF;
+    box-shadow: 0 2px 8px rgba(0, 240, 255, 0.25);
+}
+
+/* Panel Buttons / Applets */
+#panel .panel-button {
+    font-weight: 700;
+    color: #FCEE0A;
+    border-radius: 0px !important;
+    border-left: 1px solid #1E232A;
+    border-right: 1px solid #1E232A;
+    margin: 0px;
+    padding: 0 10px;
+    transition: all 100ms ease-out;
+}
+
+#panel .panel-button:hover,
+#panel .panel-button:active,
+#panel .panel-button:focus {
+    background-color: rgba(255, 0, 60, 0.22);
+    color: #FFFFFF;
+    box-shadow: inset 0 -2px 0 #FF003C;
+}
+
+/* Vitals & Sensor Text in Top Bar */
+#panel .panel-button .vitals-indicator,
+#panel .panel-button .clock-display {
+    color: #00F0FF;
+    font-family: "Share Tech Mono", "JetBrains Mono", monospace;
+    letter-spacing: 0.5px;
+}
+
+/* --- POPUP MENUS & DROPDOWNS --- */
+.popup-menu-content {
+    background-color: #0B0E14 !important;
+    border: 1px solid #00F0FF !important;
+    border-radius: 0px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 240, 255, 0.3) !important;
+    padding: 6px !important;
+}
+
+.popup-menu-item {
+    border-radius: 0px !important;
+    color: #E6E6E6 !important;
+    font-weight: 600;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+    background-color: #FF003C !important;
+    color: #FFFFFF !important;
+}
+
+/* --- DASH / DASH-TO-DOCK --- */
+#dash,
+#dashtodockContainer .dash-background {
+    background-color: rgba(11, 14, 20, 0.92) !important;
+    border: 1px solid #FF003C !important;
+    border-radius: 0px !important;
+    box-shadow: 0 0 10px rgba(255, 0, 60, 0.35) !important;
+}
+
+/* Dock Item Running Indicator */
+#dash .app-well-app-running-dot {
+    width: 3px !important;
+    height: 12px !important;
+    border-radius: 0px !important;
+    background-color: #FCEE0A !important;
+    box-shadow: 0 0 6px #FCEE0A !important;
+}
+
+/* App Icons Active State */
+#dash .app-well-app:hover .overview-icon,
+#dash .app-well-app:focus .overview-icon {
+    background-color: rgba(0, 240, 255, 0.15) !important;
+    border-radius: 0px !important;
+}
+
+/* --- ON-SCREEN KEYBOARD (OSK) --- */
+.keyboard-layout {
+    background-color: rgba(11, 14, 20, 0.96) !important;
+    border-top: 2px solid #FCEE0A !important;
+    border-radius: 0px !important;
+}
+
+.keyboard-key {
+    background-color: #12151A !important;
+    border: 1px solid #2B313A !important;
+    border-radius: 0px !important;
+    color: #FCEE0A !important;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1.15em !important;
+    font-weight: bold;
+    box-shadow: none !important;
+}
+
+.keyboard-key:hover,
+.keyboard-key:checked,
+.keyboard-key:active {
+    background-color: #FF003C !important;
+    border-color: #FF003C !important;
+    color: #FFFFFF !important;
+}
+
+.keyboard-key.shift:checked,
+.keyboard-key.symbol:checked {
+    background-color: #00F0FF !important;
+    border-color: #00F0FF !important;
+    color: #0B0E14 !important;
+}
+
+/* --- NOTIFICATIONS & OSD (Volume/Brightness Popups) --- */
+.notification,
+.osd-window {
+    background-color: #0B0E14 !important;
+    border: 1px solid #00F0FF !important;
+    border-radius: 0px !important;
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.4) !important;
+    color: #FCEE0A !important;
+}
+/* ===================================================================
+   CYBERPUNK DOCK ICON GLOW STATES
+   =================================================================== */
+
+/* 1. Tapped / Pressed / Focused Icon Glow (Cyan Pulse) */
+#dash .app-well-app:active .overview-icon,
+#dash .app-well-app:focus .overview-icon,
+#dash .show-apps:active .overview-icon {
+    background-color: rgba(0, 240, 255, 0.22) !important;
+    border: 1px solid #00F0FF !important;
+    border-radius: 0px !important;
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.85), inset 0 0 6px rgba(0, 240, 255, 0.45) !important;
+    transition: all 80ms ease-in !important;
+}
+
+/* 2. Hover State (Muted Yellow Glow) */
+#dash .app-well-app:hover .overview-icon,
+#dash .show-apps:hover .overview-icon {
+    background-color: rgba(252, 238, 10, 0.12) !important;
+    border: 1px solid #FCEE0A !important;
+    border-radius: 0px !important;
+    box-shadow: 0 0 8px rgba(252, 238, 10, 0.6) !important;
+    transition: all 120ms ease-out !important;
+}
+
+/* 3. Running App Indicator (Yellow Underglow / Side-glow) */
+#dash .app-well-app-running-dot {
+    width: 4px !important;
+    height: 14px !important;
+    border-radius: 0px !important;
+    background-color: #FCEE0A !important;
+    box-shadow: 0 0 8px #FCEE0A, 0 0 14px rgba(252, 238, 10, 0.7) !important;
+}
+
+/* 4. Focused Window Running Indicator (Hot Cyan Override) */
+#dash .app-well-app.focused .app-well-app-running-dot {
+    background-color: #00F0FF !important;
+    box-shadow: 0 0 10px #00F0FF, 0 0 16px rgba(0, 240, 255, 0.9) !important;
+}
+
+/* 5. Currently Active Window Dock Tile */
+#dash .app-well-app.focused .overview-icon {
+    border-bottom: 2px solid #00F0FF !important;
+    background-color: rgba(0, 240, 255, 0.08) !important;
+}

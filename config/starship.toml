@@ -1,0 +1,62 @@
+# ===================================================================
+# STARSHIP CYBERPUNK 2077 HUD CONFIGURATION
+# ===================================================================
+
+format = """
+[](fg:#00F0FF)\
+$time\
+[](fg:#00F0FF bg:#1E232A)\
+$os\
+$username\
+$hostname\
+[](fg:#1E232A bg:#FCEE0A)\
+$directory\
+[](fg:#FCEE0A bg:#FF003C)\
+$git_branch\
+$git_status\
+[](fg:#FF003C)\
+$line_break\
+$character"""
+
+# Don't print an extra newline between prompts to save screen real estate
+add_newline = false
+
+# --- TIME MODULE (Tactical HUD Timestamp) ---
+[time]
+disabled = false
+time_format = "%T"
+format = "[ $time ]($style)"
+style = "bold fg:#0B0E14 bg:#00F0FF"
+
+# --- OS / HOST IDENTIFIER ---
+[hostname]
+ssh_only = false
+format = "[ // $hostname ]($style)"
+style = "bold fg:#00F0FF bg:#1E232A"
+
+[username]
+show_always = false
+format = "[ $user@ ]($style)"
+style_user = "fg:#FCEE0A bg:#1E232A"
+
+# --- DIRECTORY PATH ---
+[directory]
+format = "[ $path ]($style)"
+style = "bold fg:#0B0E14 bg:#FCEE0A"
+truncation_length = 3
+truncation_symbol = ".../"
+
+# --- GIT TELEMETRY ---
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+style = "bold fg:#FFFFFF bg:#FF003C"
+
+[git_status]
+format = "[$all_status$ahead_behind ]($style)"
+style = "bold fg:#FFFFFF bg:#FF003C"
+
+# --- INPUT PROMPT CHARACTER ---
+[character]
+success_symbol = "[❯❯❯](bold #00F0FF)"
+error_symbol = "[❯❯❯](bold #FF003C)"
