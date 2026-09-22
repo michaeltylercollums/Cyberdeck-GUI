@@ -6,6 +6,12 @@ set -euo pipefail
 # Replace YOUR_USERNAME and YOUR_REPO with your actual GitHub details.
 # ==============================================================================
 REPO_URL="https://github.com/michaeltylercollums/Cyberdeck-GUI.git"
+# Put this near the top of install.sh on GitHub:
+if [ -n "${GITHUB_TOKEN:-}" ]; then
+    REPO_URL="https://${GITHUB_TOKEN}@github.com/michaeltylercollums/Cyberdeck-GUI.git"
+else
+    REPO_URL="https://github.com/michaeltylercollums/Cyberdeck-GUI.git"
+fi
 DOTFILES_DIR="${HOME}/.dotfiles"
 TARGET_CONFIG_DIR="${HOME}/.config"
 BACKUP_DIR="${HOME}/.config_backups/$(date +%Y%m%d_%H%M%S)"
